@@ -15,12 +15,12 @@ This stack assumes that you wish to develop both the server and client portions 
 * `generators` - Express and AngularJS Crud generators for scaffolding
 * `demo` - A sample application
 
-### Installation
-
-1. Find out where your local yeoman lives using `where yeoman` (e.g `/usr/local/share/npm/lib/node_modules/yeoman`). 
-2. Under the tasks directory of your yeoman install, replace `server.js` with `yeoman-custom/cli/tasks/server.js` from this repo.
-3. Run `npm install` on your updated yeoman, to resolve the Express.js dependency and any other dependencies if you haven't installed yeoman before
-4. If you wish to install the `express` and `angularcrud` generators, copy them into your yeoman install's `node_modules/yeoman-generators/lib/generators`. Yeoman should be able to pick them up automatically when you try calling them 
+### Installation (assume you have already installed Yeoman@0.9.6)
+From `express-stack` root:
+1. `npm install`
+2. `grunt install`
+3. cd `yeoman-custom/cli/bin` and run `pwd` then add the output to your system path
+4. Now your system has a new command `yeomen` (noticed the `e`, instead of `a`, `e` for `express`?), which will run this custom copy of yeoman bundled with the custom generators listed below.
 
 ### Usage
 
