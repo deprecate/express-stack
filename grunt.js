@@ -19,6 +19,14 @@ module.exports = function( grunt ) {
         }
       },
 
+      npmDemo: {
+        command: 'npm install',
+        stdout: true,
+        execOptions: {
+          cwd: './demo'
+        }
+      },
+
       linkAngularcrud: {
         command: 'ln -s ' + angularcrudPath + ' ./yeoman-custom/cli/node_modules/yeoman-generators/lib/generators/angularcrud',
         stdout: true
@@ -32,5 +40,5 @@ module.exports = function( grunt ) {
   });
 
   // Disable lint for now until we upgrade to latest grunt with latest jshint
-  grunt.registerTask('install', ['shell:npmYeoman', 'shell:linkAngularcrud', 'shell:linkExpress']);
+  grunt.registerTask('install', ['shell:npmYeoman', 'shell: npmDemo', 'shell:linkAngularcrud', 'shell:linkExpress']);
 };
