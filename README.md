@@ -38,6 +38,9 @@ yeoman server
 # that the routing is working with Express correctly
 ```
 
+Note: should you receive any warnings about Express not being present, 
+`npm install express` should resolve this.
+
 ### Demo
 
 You should now be able to navigate to `demo` and run `yeoman server` to run it. Note, if you have multiple versions of yeoman installed locally, you may wish to directly use the binary in `yeoman-custom`, otherwise everything should work.
