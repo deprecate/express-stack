@@ -22,13 +22,20 @@ This stack assumes that you wish to develop both the server and client portions 
 3. Run `npm install` on your updated yeoman, to resolve the Express.js dependency and any other dependencies if you haven't installed yeoman before
 4. If you wish to install the `express` and `angularcrud` generators, copy them into your yeoman install's `node_modules/yeoman-generators/lib/generators`. Yeoman should be able to pick them up automatically when you try calling them 
 
-### Getting started
+### Getting started from scratch
+
+After you've gone through the installation process, you have two options - you can
+either start a brand new application using the below commands or skip to the demo
+where some included sample code is available for you to try out.
 
 ```
 yeoman init angularcrud
 yeoman init angularcrud:crud post
 yeoman init express post
 yeoman server
+
+# you can then navigate to #/api/post/index to verify
+# that the routing is working with Express correctly
 ```
 
 ### Demo
