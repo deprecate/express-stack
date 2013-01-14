@@ -163,6 +163,15 @@ module.exports = function( grunt ) {
       optimize: 'none',
       baseUrl: './scripts',
       wrap: true
+    },
+    
+    server: {
+      app: {
+        main: './server'
+      },
+      dist: {
+        main: './server'
+      }
     }
   });
 
