@@ -19,7 +19,7 @@ function Generator() {
 util.inherits(Generator, ScriptBase);
 
 Generator.prototype.createControllerFiles = function createControllerFiles() {
-  this.template('controller', 'app/scripts/controllers/' + this.name);
+  this.template('standardController', 'app/scripts/controllers/' + this.name);
   this.template('spec/controller', 'test/spec/controllers/' + this.name);
 };
 
