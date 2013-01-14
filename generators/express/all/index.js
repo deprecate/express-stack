@@ -5,6 +5,11 @@ module.exports = Generator;
 
 function Generator() {
   yeoman.generators.Base.apply(this, arguments);
+
+  this.hookFor('express:crud', {
+    args: arguments
+  });
+
 }
 
 util.inherits(Generator, yeoman.generators.Base);
