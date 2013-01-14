@@ -12,7 +12,9 @@ function Generator() {
   ScriptBase.apply(this, arguments);
   
   this.model = this.name;
+  this.verb = this.args[2];
   this.name = this.filename = this.args[1];
+
 }
 
 util.inherits(Generator, ScriptBase);

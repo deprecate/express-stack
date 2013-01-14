@@ -22,7 +22,7 @@ function Generator() {
   this.filename = this.name + this.args[1].charAt(0).toUpperCase() + this.args[1].substr(1);
  
   this.hookFor('angularcrud:crud-controller', {
-    args: [this.name, this.filename]
+    args: [this.name, this.filename, this.action]
   });
   this.hookFor('angularcrud:crud-view', {
     args: [this.name, this.filename]
@@ -39,7 +39,7 @@ Generator.prototype.rewriteAppJs = function() {
     needle: '.otherwise',
     haystack: body,
     splicable: [
-      ".when('/" + this.name + "/" + this.action + "', {",
+      ".when('/api/" + this.name + "/" + this.action + "', {",
       "  templateUrl: 'views/" + this.name + "/" + this.filename + ".html',",
       "  controller: '" + _.classify(this.filename) + "Ctrl'",
       "})"

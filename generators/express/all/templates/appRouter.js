@@ -1,9 +1,11 @@
 
-module.exports = function(app) {
-  /* Required Route Files */
+var express = require('express');
+var app = express();
 
-  /* Default route serves client */
-  app.get("*", function(req, res) {
-    res.render('index.html')
-  });
-};
+/* Required Route Files */
+
+app.get('/hello/:name', function(req, res) {
+  res.send('yo! ' + req.params.name);
+});
+
+module.exports = app;

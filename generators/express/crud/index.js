@@ -14,19 +14,19 @@ function Generator() {
 util.inherits(Generator, ScriptBase);
 
 Generator.prototype.createRoutesFile = function createRoutesFile() {
-  this.template('routes/routes', 'routes/' + this.routeFile);
+    this.template('routes/routes', 'server/' + this.routeFile);
 //  this.template('spec/routes/routes', 'test/spec/routes/' + this.routeFile);
 };
 
 Generator.prototype.rewriteIndexHtml = function() {
-  var file = 'appRouter.js';
+  var file = 'server/index.js';
   var body = grunt.file.read(file);
   
   body = angularUtils.rewrite({
     needle: '/* Required Route Files */',
     haystack: body,
     splicable: [
-      "require('routes/"+this.routeFile+"')(app);"
+      "require('./"+this.routeFile+"')(app);"
     ]
   });
   
